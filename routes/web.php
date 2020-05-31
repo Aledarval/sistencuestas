@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/prueba', function () {
@@ -29,4 +29,6 @@ Route::get('/prueba1', 'PruebaController@index');
 //Route::get('/empresas/edit','EmpresaController@edit);// EDITAR
 
 //FORMA SIMPLE DE CARGAR DE LA VISTA RESOURCE LO QUE ESTA DENTRO DEL CONTROLADOR
-Route::resource('empresas', 'EmpresaController');
+//Route::resource('empresas', 'EmpresaController');
+
+Route::get('/empresas', 'EmpresaController@index')->name('empresa.index');
