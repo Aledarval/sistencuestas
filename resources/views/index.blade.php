@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sistema encuesta</title>
-</head>
-<body>
-    <a href="{{route('empresa.index')}}">Empresa</a>
-</body>
-</html>
+@extends('layouts.template')
+@section('title', 'Home')
+@section('menu')
+    @parent
+    <a href="#">Prueba</a>
+@endsection
+@section('content')
+<p>Inicio</p>
+@endsection
