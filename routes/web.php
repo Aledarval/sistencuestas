@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('index');
-});
+});*/
 
 Route::get('/prueba', function () {
     return view('prueba');
     });
+
+Route::get('/', 'HomeController@index')->name('home.index');
 // ES UNA FORMA DE COLOCAR LAS RUTAS PARA LAS VIEW YA QUE ESTAS SE CARGAN DESDE EL CONTROLADOR
 Route::get('/prueba1', 'PruebaController@index');
 
