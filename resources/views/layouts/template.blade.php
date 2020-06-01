@@ -1,9 +1,10 @@
 <html>
+
     <head>
         <title>@yield('title')</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!--<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">-->
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     </head>
     <body>
         @section('menu')

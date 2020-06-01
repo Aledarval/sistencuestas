@@ -13,17 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('index');
-});*/
 
-Route::get('/prueba', function () {
-    return view('prueba');
-    });
+//Route::get('/', function () {
+  //  return view('index');
+//});
+
 
 Route::get('/', 'HomeController@index')->name('home.index');
+
+//Route::get('/prueba', function () {
+  //  return view('prueba');
+    //});
 // ES UNA FORMA DE COLOCAR LAS RUTAS PARA LAS VIEW YA QUE ESTAS SE CARGAN DESDE EL CONTROLADOR
-Route::get('/prueba1', 'PruebaController@index');
+//Route::get('/prueba1', 'PruebaController@index');
 
  //ES UNA FORMA DE COLOCAR LAS RUTAS PARA EL CRUD
 //Route::get('/empresas', 'EmpresaController@index');// EL INDEX
@@ -34,3 +36,8 @@ Route::get('/prueba1', 'PruebaController@index');
 //Route::resource('empresas', 'EmpresaController');
 
 Route::get('/empresas', 'EmpresaController@index')->name('empresa.index');
+Route::get('/empresas/nueva', 'EmpresaController@nueva')->name('empresa.nueva');
+Route::post('/empresas/crear', 'EmpresaController@crear')->name('empresa.crear');
+Route::get('/encuesta/editar/{id}', 'EmpresaController@editar')->name('empresa.editar');
+Route::post('/encuesta/modificar/{id}', 'EmpresaController@modificar')->name('empresa.modificar');
+Route::get('/encuesta/eliminar/{id}', 'EmpresaController@eliminar')->name('empresa.eliminar');
