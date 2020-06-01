@@ -36,3 +36,8 @@ Route::get('/', 'HomeController@index')->name('home.index');
 //Route::resource('empresas', 'EmpresaController');
 
 Route::get('/empresas', 'EmpresaController@index')->name('empresa.index');
+Route::get('/empresas/nueva', 'EmpresaController@nueva')->name('empresa.nueva');
+Route::post('/empresas/crear', 'EmpresaController@crear')->name('empresa.crear');
+Route::get('/encuesta/editar/{id}', 'EmpresaController@editar')->name('empresa.editar');
+Route::post('/encuesta/modificar/{id}', 'EmpresaController@modificar')->name('empresa.modificar');
+Route::get('/encuesta/eliminar/{id}', 'EmpresaController@eliminar')->name('empresa.eliminar');

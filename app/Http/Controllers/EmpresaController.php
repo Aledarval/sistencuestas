@@ -14,7 +14,8 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        return view('empresas.index');
+        $empresas = Empresa::all();
+        return view('empresas.index', compact('empresas'));
     }
 
     /**
@@ -22,11 +23,49 @@ class EmpresaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function nueva()
     {
-        return view('empresas.created');
+        return view('empresas.form');
     }
 
+    public function crear(Request $request)
+    {
+        $empresa = new Empresa();
+        $empresa->rif = $request->input('rif');
+        $empresa->nombreempresa = $request->input('nombre_empresa');
+        $empresa->razonsocial = $request->input('razon');
+        $empresa->correo = $request->input('correo');
+        $empresa->direccionfiscal = $request->input('direccionfis');
+        $empresa->telefono = $request->input('telefono');
+        $empresa->save();
+        return redirect('/empresas');
+    }
+
+    public function editar($id)
+    {
+        $empresa = Empresa::find($id);
+        return view('empresas.editar', compact('empresa'));
+    }
+
+    public function modificar($id, Request $request)
+    {
+        $empresa = Empresa::find($id);
+        $empresa->rif = $request->input('rif');
+        $empresa->nombreempresa = $request->input('nombre_empresa');
+        $empresa->razonsocial = $request->input('razon');
+        $empresa->correo = $request->input('correo');
+        $empresa->direccionfiscal = $request->input('direccionfis');
+        $empresa->telefono = $request->input('telefono');
+        $empresa->save();
+        return redirect('/empresas');
+    }
+
+    public function eliminar($id)
+    {
+        $empresa = Empresa::find($id);
+        $empresa->delete();
+        return redirect('/empresas');
+    }
     /**
      * Store a newly created resource in storage.
      *
