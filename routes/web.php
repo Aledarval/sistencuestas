@@ -13,17 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-/*Route::get('/', function () {
-    return view('index');
-});*/
 
-Route::get('/prueba', function () {
-    return view('prueba');
-    });
-
-Route::get('/', 'HomeController@index')->name('home.index');
-=======
 //Route::get('/', function () {
   //  return view('index');
 //});
@@ -34,7 +24,6 @@ Route::get('/', 'HomeController@index')->name('home.index');
 //Route::get('/prueba', function () {
   //  return view('prueba');
     //});
->>>>>>> master
 // ES UNA FORMA DE COLOCAR LAS RUTAS PARA LAS VIEW YA QUE ESTAS SE CARGAN DESDE EL CONTROLADOR
 //Route::get('/prueba1', 'PruebaController@index');
 
