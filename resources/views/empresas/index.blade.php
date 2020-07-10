@@ -2,7 +2,7 @@
 @section('title', 'Empresa')
 @section('menu')
     @parent
-     <a href="#">Link desde empresa</a>
+     <a href="#"></a>
 @endsection
 @section('content')
 <br/>
