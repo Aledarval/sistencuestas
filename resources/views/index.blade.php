@@ -1,9 +1,12 @@
 @extends('layouts.template')
-@section('title', 'Home')
-@section('menu')
-    @parent
-    <a href="#">Configuraciones</a>
-@endsection
+@section('title', 'Estado')
 @section('content')
-<p>Inicio</p>
+<div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Inicio</h3>
+    </div>
+    <div class="card-body">
+      Inicio
+    </div>
+  </div>
 @endsection
